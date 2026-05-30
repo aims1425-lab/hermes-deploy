@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  hermes:
+    image: python:3.12-slim
+    container_name: hermes-agent
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8644:8644"
+    environment:
+      - HERMES_HOME=/hermes
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+    volumes:
+      - hermes-data:/hermes
+      - ./config.yaml:/hermes/config.yaml:ro
+      - ./.env:/hermes/.env:ro
+    command: >
+      sh -c "pip install hermes-agent --quiet &&
+             hermes gateway run --host 0.0.0.0"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8644/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  hermes-data:

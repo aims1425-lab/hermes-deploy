@@ -1,0 +1,64 @@
+# Hermes Deploy - Production Configuration Template
+# See: https://github.com/aims1425-lab/hermes-deploy
+
+# ── Model Provider ──────────────────────────────────────
+model:
+  default: gpt-4o
+  provider: openai
+  base_url: ""
+
+# ── Gateway ─────────────────────────────────────────────
+gateway:
+  enabled: true
+  port: 8644
+  host: 127.0.0.1
+  max_concurrent_tasks: 5
+
+# ── Messaging Platforms ─────────────────────────────────
+platforms:
+  telegram:
+    enabled: true
+    bot_token: "${TELEGRAM_BOT_TOKEN}"
+
+  discord:
+    enabled: false
+    bot_token: "${DISCORD_BOT_TOKEN}"
+
+# ── Security ────────────────────────────────────────────
+security:
+  allowed_user_ids: []             # Restrict to specific user IDs
+  rate_limit: "30/minute"          # Max messages per minute
+  max_turns: 50                    # Max conversation turns
+  sanitize_tool_output: true       # Strip sensitive data
+  block_inline_code_execution: false
+
+# ── Display ─────────────────────────────────────────────
+display:
+  tool_progress: false
+  show_reasoning: false
+  verbose: false
+
+# ── Context Compression ─────────────────────────────────
+context:
+  compression:
+    enabled: true
+    threshold: 30%
+    target_ratio: 15%
+    protect_last: 20
+    model: gpt-4o-mini
+    provider: openai
+
+# ── Skills ──────────────────────────────────────────────
+skills:
+  always_load: []
+  directories: ["~/.hermes/skills"]
+
+# ── Cron ────────────────────────────────────────────────
+cron:
+  enabled: false
+  max_concurrent: 2
+
+# ── Memory ──────────────────────────────────────────────
+memory:
+  enabled: true
+  char_limit: 50000
