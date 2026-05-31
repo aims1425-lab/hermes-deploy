@@ -25,4 +25,4 @@ systemctl --user start hermes-gateway
 ```
 
 ### 4. Reverse Proxy (for webhooks)
-See docs/nginx-example.conf for SSL termination.
+See [docs/nginx-example.conf](./nginx-example.conf) for a local reverse proxy example.
