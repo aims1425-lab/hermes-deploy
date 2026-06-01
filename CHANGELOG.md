@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- No unreleased changes.
+
+## 0.1.1 - 2026-06-01
+
 ### Added
 - Added comprehensive OSS maintainer documentation:
   - [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md)
