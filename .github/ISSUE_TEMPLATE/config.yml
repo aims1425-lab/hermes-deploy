@@ -3,3 +3,6 @@ contact_links:
   - name: Documentation
     url: https://github.com/aims1425-lab/hermes-deploy/blob/main/README.md
     about: Read setup and usage docs before filing an issue.
+  - name: Security report
+    url: https://github.com/aims1425-lab/hermes-deploy/security/advisories/new
+    about: Report vulnerabilities privately; do not use public issues.

@@ -6,6 +6,15 @@ status=0
 pass() { printf "\033[0;32mPASS\033[0m %s\n" "$1"; }
 warn() { printf "\033[0;33mWARN\033[0m %s\n" "$1"; }
 fail() { printf "\033[0;31mFAIL\033[0m %s\n" "$1"; status=1; }
+check_non_empty() {
+  local path="$1"
+  local label="$2"
+  if [ -s "$path" ]; then
+    pass "$label"
+  else
+    fail "$label missing or empty"
+  fi
+}
 
 printf "Running repository validation...\n\n"
 
@@ -54,6 +63,30 @@ if command -v docker >/dev/null 2>&1; then
 else
   warn "docker not installed; skipped compose check"
 fi
+
+required_files=(
+  "CONTRIBUTING.md"
+  "SECURITY.md"
+  "ROADMAP.md"
+  "CHANGELOG.md"
+  "CODE_OF_CONDUCT.md"
+  ".github/pull_request_template.md"
+  ".github/ISSUE_TEMPLATE/bug_report.md"
+  ".github/ISSUE_TEMPLATE/feature_request.md"
+  ".github/ISSUE_TEMPLATE/docs_improvement.md"
+  ".github/ISSUE_TEMPLATE/security_hardening.md"
+  ".github/ISSUE_TEMPLATE/config.yml"
+  "docs/PRODUCTION.md"
+  "docs/SECURITY.md"
+  "docs/TROUBLESHOOTING.md"
+  "docs/THREAT_MODEL.md"
+  "docs/RELEASE_PROCESS.md"
+  "docs/MAINTAINER_GUIDE.md"
+)
+
+for required in "${required_files[@]}"; do
+  check_non_empty "$required" "required file: $required"
+done
 
 if [ "$status" -ne 0 ]; then
   printf "\nValidation failed. Please fix the issues above.\n"

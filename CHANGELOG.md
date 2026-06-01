@@ -1,5 +1,24 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Added comprehensive OSS maintainer documentation:
+  - [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md)
+  - [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md)
+  - [docs/MAINTAINER_GUIDE.md](docs/MAINTAINER_GUIDE.md)
+- Expanded [CONTRIBUTING.md](CONTRIBUTING.md) with validation, issue triage, and security-reporting guidance.
+- Expanded [SECURITY.md](SECURITY.md) with supported version policy, response expectations, and secret-handling.
+- Expanded [ROADMAP.md](ROADMAP.md) into release-oriented milestones and contribution-friendly items.
+- Added issue templates for documentation and security hardening proposals, and strengthened existing templates.
+- Strengthened PR checklist and repository validation requirements.
+- Updated [README.md](README.md) with maintainer links and OSS maintenance section.
+- `scripts/validate.sh` now checks required OSS governance files and templates for presence and non-empty content.
+
+### Changed
+- Improved contributor guidance around reproducibility and triage workflows.
+- Raised documentation coverage for maintainer/support operations without changing runtime behavior.
+
 ## 0.1.0 - 2026-05-31
 
 ### Added

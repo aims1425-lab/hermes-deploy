@@ -55,11 +55,14 @@ hermes-deploy/
 ├── docs/
 │   ├── PRODUCTION.md
 │   ├── SECURITY.md
+│   ├── MAINTAINER_GUIDE.md
+│   ├── RELEASE_PROCESS.md
+│   ├── THREAT_MODEL.md
 │   └── TROUBLESHOOTING.md
 ├── .github/
 │   ├── workflows/ci.yml
 │   ├── ISSUE_TEMPLATE/
-│   └── pull_request_template.md
+│   ├── pull_request_template.md
 ├── LICENSE
 ├── CONTRIBUTING.md
 ├── SECURITY.md
@@ -106,6 +109,16 @@ platforms:
 
 PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## OSS maintenance docs
+
+- [Contributor guide](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
+- [Threat model](docs/THREAT_MODEL.md)
+- [Maintainer guide](docs/MAINTAINER_GUIDE.md)
+- [Release process](docs/RELEASE_PROCESS.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+
 Validation
 
 Run repository checks before opening a pull request:
@@ -115,6 +128,12 @@ make validate
 ```
 
 This checks the installer syntax, validates templates, and runs lightweight local checks.
+
+## Documentation validation
+
+Repository docs are maintained to reflect real contribution and maintenance paths:
+- Keep `README.md`, this section, and template links up to date with policy changes.
+- Use `make validate` to enforce required governance files and template presence.
 
 ## Credits
 
