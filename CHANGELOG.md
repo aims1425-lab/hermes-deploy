@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- No unreleased changes.
+
+## 0.1.2 - 2026-06-05
+
 ### Added
 - Added [docs/CODEX_FOR_OSS_APPLICATION.md](docs/CODEX_FOR_OSS_APPLICATION.md) with a truthful, ready-to-copy OSS maintainer support application draft.
 - Added [docs/OSS_READINESS.md](docs/OSS_READINESS.md) to track public repository readiness signals and anti-overclaiming rules.
