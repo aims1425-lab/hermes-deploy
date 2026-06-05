@@ -182,8 +182,10 @@ This repository is maintained like a small production operations template:
 - releases follow [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md);
 - security changes are reviewed against [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
-For OSS support/grant programs, see the ready-to-copy maintainer narrative in
-[docs/CODEX_FOR_OSS_APPLICATION.md](docs/CODEX_FOR_OSS_APPLICATION.md).
+For OSS support/grant programs, see:
+
+- [docs/CODEX_FOR_OSS_APPLICATION.md](docs/CODEX_FOR_OSS_APPLICATION.md) for the long-form maintainer narrative.
+- [docs/OPENAI_FORM_ANSWERS.md](docs/OPENAI_FORM_ANSWERS.md) for ready-to-copy 500-character form answers.
 
 ## What is intentionally not included
 

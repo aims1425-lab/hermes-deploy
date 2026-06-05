@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-- No unreleased changes.
+### Added
+- Added [docs/OPENAI_FORM_ANSWERS.md](docs/OPENAI_FORM_ANSWERS.md) with ready-to-copy 500-character OpenAI Codex for OSS form answers.
+
+### Changed
+- Linked the short form answers from [README.md](README.md) and [ROADMAP.md](ROADMAP.md).
 
 ## 0.1.2 - 2026-06-05
 
