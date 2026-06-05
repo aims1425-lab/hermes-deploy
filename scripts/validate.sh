@@ -83,7 +83,6 @@ required_files=(
   "docs/RELEASE_PROCESS.md"
   "docs/MAINTAINER_GUIDE.md"
   "docs/CODEX_FOR_OSS_APPLICATION.md"
-  "docs/OPENAI_FORM_ANSWERS.md"
   "docs/OSS_READINESS.md"
 )
 

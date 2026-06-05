@@ -4,13 +4,18 @@
 
 - No unreleased changes.
 
+## 0.1.4 - 2026-06-05
+
+### Removed
+- Removed public copy-paste OpenAI form answers from the repository; application wording should stay outside the submitted project.
+
 ## 0.1.3 - 2026-06-05
 
 ### Added
-- Added [docs/OPENAI_FORM_ANSWERS.md](docs/OPENAI_FORM_ANSWERS.md) with ready-to-copy 500-character OpenAI Codex for OSS form answers.
+- Added maintainer-facing application support notes outside the runtime path.
 
 ### Changed
-- Linked the short form answers from [README.md](README.md) and [ROADMAP.md](ROADMAP.md).
+- Refined grant-readiness documentation without changing runtime behavior.
 
 ## 0.1.2 - 2026-06-05
 
