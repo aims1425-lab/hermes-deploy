@@ -87,7 +87,8 @@ make validate
 ```
 
 The validation task checks shell syntax, required governance files, templates, and optional
-Docker/YAML checks when those tools are installed.
+Docker/YAML checks when those tools are installed, plus local Markdown links across
+repository docs.
 
 ## Production baseline
 

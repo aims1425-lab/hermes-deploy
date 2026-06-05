@@ -64,6 +64,12 @@ else
   warn "docker not installed; skipped compose check"
 fi
 
+if bash scripts/check-markdown-links.sh; then
+  pass "local markdown docs link check"
+else
+  fail "local markdown docs link check failed"
+fi
+
 required_files=(
   "CONTRIBUTING.md"
   "SECURITY.md"

@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-- No unreleased changes.
+### Added
+- Add a dependency-free local Markdown link checker and run it from `make validate`.
+
+### Changed
+- Document that repository validation now checks local Markdown links.
 
 ## 0.1.4 - 2026-06-05
 
