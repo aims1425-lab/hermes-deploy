@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+No unreleased changes.
+
+## 0.1.5 - 2026-06-12
+
 ### Added
 - Add a dependency-free local Markdown link checker and run it from `make validate`.
 - Add dependency-free smoke tests under `tests/` and expose them through `make test`.
