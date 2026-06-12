@@ -16,3 +16,7 @@ jobs:
       - name: Validate repository
         run: |
           make validate
+
+      - name: Run smoke tests
+        run: |
+          make test

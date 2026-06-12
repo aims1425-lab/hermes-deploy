@@ -84,11 +84,13 @@ docker compose up -d
 
 ```bash
 make validate
+make test
 ```
 
 The validation task checks shell syntax, required governance files, templates, and optional
 Docker/YAML checks when those tools are installed, plus local Markdown links across
-repository docs.
+repository docs. The smoke test task checks the public repository contract without
+calling external services.
 
 ## Production baseline
 
@@ -119,6 +121,8 @@ hermes-deploy/
 ├── install.sh              # Automated server setup
 ├── scripts/
 │   └── validate.sh         # Repository validation script
+├── tests/
+│   └── smoke.sh            # Dependency-free smoke tests
 ├── docs/
 │   ├── PRODUCTION.md
 │   ├── SECURITY.md
@@ -126,7 +130,7 @@ hermes-deploy/
 │   ├── TROUBLESHOOTING.md
 │   ├── MAINTAINER_GUIDE.md
 │   ├── RELEASE_PROCESS.md
-│   └── CODEX_FOR_OSS_APPLICATION.md
+│   └── OSS_READINESS.md
 ├── .github/
 │   ├── workflows/ci.yml
 │   ├── ISSUE_TEMPLATE/
@@ -176,16 +180,12 @@ platforms:
 
 This repository is maintained like a small production operations template:
 
-- changes go through `make validate` and GitHub Actions CI;
+- changes go through `make validate`, `make test`, and GitHub Actions CI;
 - issues and PRs use templates to capture reproducible details;
 - release notes are tracked in [CHANGELOG.md](CHANGELOG.md);
 - roadmap work is visible in [ROADMAP.md](ROADMAP.md);
 - releases follow [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md);
 - security changes are reviewed against [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
-
-For OSS support/grant programs, see:
-
-- [docs/CODEX_FOR_OSS_APPLICATION.md](docs/CODEX_FOR_OSS_APPLICATION.md) for the long-form maintainer narrative.
 
 ## What is intentionally not included
 

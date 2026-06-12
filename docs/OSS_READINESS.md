@@ -19,14 +19,15 @@ This checklist keeps the repository ready for OSS support programs, public revie
 - [x] Pull request template
 - [x] GitHub Actions CI
 - [x] Local validation command: `make validate`
+- [x] Local smoke test command: `make test`
 - [x] Release tag and release notes
 
 ## Before applying to a support program
 
 - [ ] Confirm latest CI is green.
 - [ ] Confirm latest release points to the current readiness baseline.
-- [ ] Review `docs/CODEX_FOR_OSS_APPLICATION.md` and remove anything that is not true.
 - [ ] Do not include secrets, private customer data, private URLs, or commercial product internals.
+- [ ] Keep application answers, grant drafts, and private reviewer notes outside the public repository.
 - [ ] Frame the request around public maintainer work: tests, CI, PR review, issue triage, docs, releases, and security.
 
 ## Signals to improve over time

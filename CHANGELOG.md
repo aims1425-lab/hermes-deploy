@@ -4,19 +4,24 @@
 
 ### Added
 - Add a dependency-free local Markdown link checker and run it from `make validate`.
+- Add dependency-free smoke tests under `tests/` and expose them through `make test`.
 
 ### Changed
 - Document that repository validation now checks local Markdown links.
+- Run smoke tests in CI after repository validation.
+
+### Removed
+- Remove the public application draft artifact and repository references to it.
 
 ## 0.1.4 - 2026-06-05
 
 ### Removed
-- Removed public copy-paste OpenAI form answers from the repository; application wording should stay outside the submitted project.
+- Removed reviewer-specific answer material from the public tree; reviewer notes stay outside the submitted project.
 
 ## 0.1.3 - 2026-06-05
 
 ### Added
-- Added maintainer-facing application support notes outside the runtime path.
+- Added maintainer-facing reviewer hygiene notes outside the runtime path.
 
 ### Changed
 - Refined grant-readiness documentation without changing runtime behavior.
@@ -24,7 +29,6 @@
 ## 0.1.2 - 2026-06-05
 
 ### Added
-- Added [docs/CODEX_FOR_OSS_APPLICATION.md](docs/CODEX_FOR_OSS_APPLICATION.md) with a truthful, ready-to-copy OSS maintainer support application draft.
 - Added [docs/OSS_READINESS.md](docs/OSS_READINESS.md) to track public repository readiness signals and anti-overclaiming rules.
 
 ### Changed

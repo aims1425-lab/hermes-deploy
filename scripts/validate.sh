@@ -88,8 +88,8 @@ required_files=(
   "docs/THREAT_MODEL.md"
   "docs/RELEASE_PROCESS.md"
   "docs/MAINTAINER_GUIDE.md"
-  "docs/CODEX_FOR_OSS_APPLICATION.md"
   "docs/OSS_READINESS.md"
+  "tests/smoke.sh"
 )
 
 for required in "${required_files[@]}"; do
